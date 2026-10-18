@@ -1,6 +1,11 @@
 package app.organicmaps.help;
 
 import android.content.res.Configuration;
+import android.content.Intent;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -35,7 +40,36 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
     view.setOnClickListener(this);
     if (tint)
       Graphics.tint(view);
-    return view;
+    
+        // SIM Maps - Geandre Donation Clickable - Capitec 2450748535
+        try {
+            android.view.View btnCapitec = view.findViewById(R.id.sim_donate_button);
+            if (btnCapitec != null) {
+                btnCapitec.setOnClickListener(v -> {
+                    ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                    cm.setPrimaryClip(ClipData.newPlainText("Capitec", "2450748535"));
+                    android.widget.Toast.makeText(getActivity(), "Capitec 2450748535 copied!", android.widget.Toast.LENGTH_SHORT).show();
+                    Intent launch = getActivity().getPackageManager().getLaunchIntentForPackage("capitec.acuity.mobile.prod");
+                    if (launch != null) startActivity(launch);
+                });
+            }
+            android.view.View btnWa = view.findViewById(R.id.sim_whatsapp_button);
+            if (btnWa != null) {
+                btnWa.setOnClickListener(v -> {
+                    String url = "https://wa.me/27645263038?text=Hi%20Geandre%20I%20want%20to%20support%20SIM%20Maps%20-%20Capitec%202450748535";
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                });
+            }
+            android.view.View btnEmail = view.findViewById(R.id.sim_email_button);
+            if (btnEmail != null) {
+                btnEmail.setOnClickListener(v -> {
+                    Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:drevanwyk1@gmail.com?subject=SIM Maps Donation - Upington"));
+                    startActivity(Intent.createChooser(email, "Email Geandre"));
+                });
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+
+        return view;
   }
 
   @Override
