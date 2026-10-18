@@ -326,15 +326,3 @@
 
 </LinearLayout>
 </ScrollView>
-# Save in nano
-^O -> Enter -> ^X
-
-# Push FINAL GOLD APK
-git add android/app/src/main/res/layout/about.xml
-git commit -m "SIM Maps v36 FINAL - Build by Geandre Van Wyk Upington GOLD #D4AF37 + Capitec donate clickable"
-git push origin master
-
-echo "GOLD APK BUILDING! Check:"
-echo "github.com/BigWrapper/SIM-Maps/actions"
-
-		
