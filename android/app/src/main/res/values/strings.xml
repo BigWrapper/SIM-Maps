@@ -910,15 +910,3 @@
     <!-- Accessibility label for the button that reverses the complete planned route, including intermediate stops. -->
     <string name="reverse_route">Reverse route</string>
 </resources>
-
-    <!-- SIM Maps Donation - Geandre -->
-    <string name="sim_donation_message">❤️ Support SIM Maps - Made in Upington
-Built by Geandre Van Wyk, Northern Cape.
-
-Capitec: 2450748535
-Name: G Van Wyk
-Ref: SIM Maps
-WhatsApp: 064 526 3038
-Email: drevanwyk1@gmail.com
-
-Your donation keeps maps FREE for our people without data!</string>
