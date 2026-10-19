@@ -1,10 +1,10 @@
 package app.organicmaps.help;
 
-import android.content.res.Configuration;
-import android.content.Intent;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
+
 import app.organicmaps.BuildConfig;
 import app.organicmaps.R;
 import app.organicmaps.base.BaseMwmFragment;
@@ -39,37 +41,46 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
     final TextView view = frame.findViewById(id);
     view.setOnClickListener(this);
     if (tint)
+    {
       Graphics.tint(view);
-    
-        // SIM Maps - Geandre Donation Clickable - Capitec 2450748535
-        try {
-            android.view.View btnCapitec = view.findViewById(R.id.sim_donate_button);
-            if (btnCapitec != null) {
-                btnCapitec.setOnClickListener(v -> {
-                    ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-                    cm.setPrimaryClip(ClipData.newPlainText("Capitec", "2450748535"));
-                    android.widget.Toast.makeText(getActivity(), "Capitec 2450748535 copied!", android.widget.Toast.LENGTH_SHORT).show();
-                    Intent launch = getActivity().getPackageManager().getLaunchIntentForPackage("capitec.acuity.mobile.prod");
-                    if (launch != null) startActivity(launch);
-                });
-            }
-            android.view.View btnWa = view.findViewById(R.id.sim_whatsapp_button);
-            if (btnWa != null) {
-                btnWa.setOnClickListener(v -> {
-                    String url = "https://wa.me/27645263038?text=Hi%20Geandre%20I%20want%20to%20support%20SIM%20Maps%20-%20Capitec%202450748535";
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                });
-            }
-            android.view.View btnEmail = view.findViewById(R.id.sim_email_button);
-            if (btnEmail != null) {
-                btnEmail.setOnClickListener(v -> {
-                    Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:drevanwyk1@gmail.com?subject=SIM Maps Donation - Upington"));
-                    startActivity(Intent.createChooser(email, "Email Geandre"));
-                });
-            }
-        } catch (Exception e) { e.printStackTrace(); }
+    }
 
-        return view;
+    // SIM Maps - Geandre Donation Clickable - Capitec 2450748535
+    try
+    {
+      android.view.View btnCapitec = view.findViewById(R.id.sim_donate_button);
+      if (btnCapitec != null)
+      {
+        btnCapitec.setOnClickListener(v -> {
+          ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+          cm.setPrimaryClip(ClipData.newPlainText("Capitec", "2450748535"));
+          android.widget.Toast.makeText(getActivity(), "Capitec 2450748535 copied!", android.widget.Toast.LENGTH_SHORT).show();
+          Intent launch = getActivity().getPackageManager().getLaunchIntentForPackage("capitec.acuity.mobile.prod");
+          if (launch != null) startActivity(launch);
+        });
+      }
+      android.view.View btnWa = view.findViewById(R.id.sim_whatsapp_button);
+      if (btnWa != null)
+      {
+        btnWa.setOnClickListener(v -> {
+          String url = "https://wa.me/27645263038?text=Hi%20Geandre%20I%20want%20to%20support%20SIM%20Maps%20-%20Capitec%202450748535";
+          startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        });
+      }
+      android.view.View btnEmail = view.findViewById(R.id.sim_email_button);
+      if (btnEmail != null)
+      {
+        btnEmail.setOnClickListener(v -> {
+          Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:drevanwyk1@gmail.com?subject=SIM Maps Donation - Upington"));
+          startActivity(Intent.createChooser(email, "Email Geandre"));
+        });
+      }
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+    return view;
   }
 
   @Override
@@ -77,16 +88,11 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
   {
     mDonateUrl = Utils.getDonateUrl(requireContext());
     View root = inflater.inflate(R.layout.about, container, false);
-
     ((TextView) root.findViewById(R.id.version)).setText(BuildConfig.VERSION_NAME);
-
     final boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-
     final String dataVersion = DateUtils.getShortDateFormatter().format(Framework.getDataVersion());
     final TextView osmPresentationView = root.findViewById(R.id.osm_presentation);
-    if (osmPresentationView != null)
-      osmPresentationView.setText(getString(R.string.osm_presentation, dataVersion));
-
+    if (osmPresentationView != null) osmPresentationView.setText(getString(R.string.osm_presentation, dataVersion));
     setupItem(R.id.news, true, root);
     setupItem(R.id.web, true, root);
     setupItem(R.id.email, true, root);
@@ -100,13 +106,11 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
     setupItem(R.id.openstreetmap, true, root);
     setupItem(R.id.faq, true, root);
     setupItem(R.id.report, isLandscape, root);
-
     final TextView supportUsView = root.findViewById(R.id.support_us);
     if (BuildConfig.FLAVOR.equals("google") && !TextUtils.isEmpty(mDonateUrl))
       supportUsView.setVisibility(View.GONE);
     else
       setupItem(R.id.support_us, true, root);
-
     DonationView donationView = root.findViewById(R.id.donate);
     if (TextUtils.isEmpty(mDonateUrl))
     {
@@ -121,24 +125,17 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
         Framework.nativeDidShowDonationPage();
       });
     }
-
     if (BuildConfig.REVIEW_URL.isEmpty())
       root.findViewById(R.id.rate).setVisibility(View.GONE);
     else
       setupItem(R.id.rate, true, root);
-
     setupItem(R.id.copyright, false, root);
     View termOfUseView = root.findViewById(R.id.term_of_use_link);
     View privacyPolicyView = root.findViewById(R.id.privacy_policy);
-    termOfUseView.setOnClickListener(
-        v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "terms/"));
-    privacyPolicyView.setOnClickListener(
-        v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "privacy/"));
-
+    termOfUseView.setOnClickListener(v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "terms/"));
+    privacyPolicyView.setOnClickListener(v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "privacy/"));
     shareLauncher = SharingUtils.RegisterLauncher(this);
-
     ViewCompat.setOnApplyWindowInsetsListener(root, new ScrollableContentInsetsListener(root));
-
     return root;
   }
 
