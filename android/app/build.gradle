@@ -136,6 +136,7 @@ android {
 
       // Enable jni debug build
       jniDebuggable true
+    resValue "string", "app_name", "\"SIM Maps\""
     }
 
     release {
