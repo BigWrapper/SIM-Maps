@@ -2,8 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?attr/background">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/about"
             app:srcCompat="@drawable/logo" />
 
         <TextView
@@ -36,7 +34,6 @@
             android:gravity="center"
             android:layout_marginTop="8dp"/>
 
-        <!-- SIM MAPS DONATION BUTTONS -->
         <Button
             android:id="@+id/donate_button"
             android:layout_width="match_parent"
@@ -50,40 +47,39 @@
             android:id="@+id/sim_whatsapp_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="💬 WhatsApp: 064 526 3038"
+            android:text="💬 WhatsApp 064 526 3038"
             android:backgroundTint="#25D366"
-            android:textColor="#FFFFFF"
             android:layout_marginTop="8dp"/>
 
         <Button
             android:id="@+id/sim_email_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="✉️ Email: drevanwyk1@gmail.com"
+            android:text="✉️ Email Donation"
             android:backgroundTint="#121212"
             android:textColor="#D4AF37"
             android:layout_marginTop="8dp"/>
 
-        <!-- KEEP ORIGINAL ITEMS HIDDEN BUT NEEDED FOR CODE -->
-        <TextView android:id="@+id/news" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/web" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/email" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/github" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/telegram" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/instagram" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/facebook" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/twitter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/matrix" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/mastodon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/openstreetmap" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/faq" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/report" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/support_us" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <app.organicmaps.widget.DonationView android:id="@+id/donate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/rate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/copyright" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/term_of_use_link" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <TextView android:id="@+id/privacy_policy" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!-- Hidden original IDs so HelpFragment compiles -->
+        <TextView android:id="@+id/news" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/web" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/email" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/github" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/telegram" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/instagram" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/facebook" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/twitter" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/matrix" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/mastodon" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/openstreetmap" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/faq" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/report" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/support_us" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/donate" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/rate" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/copyright" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/term_of_use_link" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/privacy_policy" android:visibility="gone" android:layout_width="1dp" android:layout_height="1dp"/>
 
     </LinearLayout>
 </ScrollView>
