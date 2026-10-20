@@ -32,8 +32,7 @@ import app.organicmaps.widget.DonationView;
 public class HelpFragment extends BaseMwmFragment implements View.OnClickListener
 {
   private String mDonateUrl;
-  private final ActivityResultLauncher<Intent> shareLauncher = SharingUtils.RegisterLauncher(this);
-
+  private final ActivityResultLauncher<SharingIntent> shareLauncher = SharingUtils.RegisterLauncher(this);
   private TextView setupItem(@IdRes int id, boolean tint, @NonNull View frame)
   {
     final TextView view = frame.findViewById(id);
