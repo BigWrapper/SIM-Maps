@@ -19,13 +19,12 @@ import app.organicmaps.Framework;
 import app.organicmaps.R;
 import app.organicmaps.base.BaseMwmFragment;
 import app.organicmaps.util.DateUtils;
-import app.organicmaps.util.SharingUtils;
+
 import app.organicmaps.util.Utils;
 import app.organicmaps.util.WindowInsetUtils.ScrollableContentInsetsListener;
 import app.organicmaps.widget.DonationView;
-import app.organicmaps.util.StringUtils;
-import app.organicmaps.util.TextUtils;
-
+import android.text.TextUtils;
+import android.text.TextUtils;
 public class HelpFragment extends BaseMwmFragment implements View.OnClickListener
 {
   private String mDonateUrl;
