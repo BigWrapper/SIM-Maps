@@ -73,7 +73,7 @@ public void synchronizeApplicationTheme()
   @androidx.annotation.UiThread
   public void synchronizeMapStyle(@UiContext @NonNull Context context, boolean isRendererActive)
   {
-    var isDarkMode = ThemeUtils.isDarkTheme(context);
+    var isDarkMode = false; // FORCE WHITE MAP - black text like Google Maps
     var mapStyle = calculateMapStyle(isDarkMode);
 
     if (MapStyle.get() != mapStyle)
