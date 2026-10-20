@@ -113,14 +113,15 @@ public void synchronizeApplicationTheme()
   }
 
   private MapStyle calculateMapStyle(boolean dark)
-  {
+{
+    // FORCE LIGHT MAP ALWAYS - White + Black text + Gold roads
     if (RoutingController.get().isVehicleNavigation())
-      return dark ? MapStyle.VehicleDark : MapStyle.VehicleClear;
+        return MapStyle.VehicleClear;
     else if (Framework.nativeIsOutdoorsLayerEnabled())
-      return dark ? MapStyle.OutdoorsDark : MapStyle.OutdoorsClear;
+        return MapStyle.OutdoorsClear;
     else
-      return dark ? MapStyle.Dark : MapStyle.Clear;
-  }
+        return MapStyle.Clear;
+}
 
   private void setMapStyle(MapStyle style, boolean isRendererActive)
   {
