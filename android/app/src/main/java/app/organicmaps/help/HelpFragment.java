@@ -83,7 +83,7 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
     View privacyPolicyView = root.findViewById(R.id.privacy_policy);
     termOfUseView.setOnClickListener(v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "terms-of-use/"));
     privacyPolicyView.setOnClickListener(v -> Utils.openUrl(requireActivity(), getResources().getString(R.string.translated_om_site_url) + "privacy/"));
-    SharingUtils.AttachSharingToParent(this);
+    
     ViewCompat.setOnApplyWindowInsetsListener(root, new ScrollableContentInsetsListener(root));
 
     // SIM MAPS CUSTOM BUTTONS - CLICKABLE!
