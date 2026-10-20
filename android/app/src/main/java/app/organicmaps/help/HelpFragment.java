@@ -25,7 +25,7 @@ import app.organicmaps.sdk.util.Constants;
 import app.organicmaps.sdk.util.DateUtils;
 import app.organicmaps.util.Graphics;
 import app.organicmaps.util.SharingUtils;
-import app.organicmaps.sharing.SharingIntent;
+
 import app.organicmaps.util.Utils;
 import app.organicmaps.util.WindowInsetUtils.ScrollableContentInsetsListener;
 import app.organicmaps.widget.DonationView;
@@ -33,7 +33,7 @@ import app.organicmaps.widget.DonationView;
 public class HelpFragment extends BaseMwmFragment implements View.OnClickListener
 {
   private String mDonateUrl;
-  private final ActivityResultLauncher<SharingIntent> shareLauncher = SharingUtils.RegisterLauncher(this);
+  
   private TextView setupItem(@IdRes int id, boolean tint, @NonNull View frame)
   {
     final TextView view = frame.findViewById(id);
