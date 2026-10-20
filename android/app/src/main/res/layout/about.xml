@@ -25,7 +25,7 @@
         android:layout_marginBottom="@dimen/margin_half"
         android:contentDescription="@string/app_name"
         app:srcCompat="@drawable/logo" />
-        app:tint="?attr/colorLogo" />
+        
 
     <TextView
         android:id="@+id/version"
