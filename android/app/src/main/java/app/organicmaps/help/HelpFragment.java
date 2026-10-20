@@ -87,14 +87,17 @@ public class HelpFragment extends BaseMwmFragment implements View.OnClickListene
     ViewCompat.setOnApplyWindowInsetsListener(root, new ScrollableContentInsetsListener(root));
 
     // SIM MAPS CUSTOM BUTTONS - CLICKABLE!
+        // SIM MAPS CUSTOM BUTTONS - CLICKABLE!
     View btnCapitec = root.findViewById(R.id.sim_donate_button);
     if (btnCapitec != null) btnCapitec.setOnClickListener(v -> {
-      ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-      cm.setPrimaryClip(ClipData.newPlainText("Capitec", "2450748535"));
-      android.widget.Toast.makeText(getActivity(), "Capitec 2450748535 copied!", android.widget.Toast.LENGTH_SHORT).show();
-      try { Intent launch = getActivity().getPackageManager().getLaunchIntentForPackage("com.capaciti.bank"); if (launch == null) launch = getActivity().getPackageManager().getLaunchIntentForPackage("capitec.acuity.mobile.prod"); if (launch != null) startActivity(launch); } catch (Exception ignored) {}
+        ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+        cm.setPrimaryClip(ClipData.newPlainText("Capitec", "2450748535"));
+        android.widget.Toast.makeText(getActivity(), "Capitec 2450748535 copied!", android.widget.Toast.LENGTH_SHORT).show();
+        try {
+            Intent launch = getActivity().getPackageManager().getLaunchIntentForPackage("com.capaciti.bank");
+            if (launch != null) startActivity(launch);
+        } catch (Exception e) {}
     });
-    View btnWa = root.findViewById(R.id.sim_whatsapp_button);
     if (btnWa != null) btnWa.setOnClickListener(v -> {
       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/27645263038?text=Hi%20Geandre%20I%20want%20to%20support%20SIM%20Maps")));
     });
