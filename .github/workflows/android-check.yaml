@@ -52,7 +52,8 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v6
-
+        with:
+          lfs: true
       - name: Lint
         shell: bash
         working-directory: android
