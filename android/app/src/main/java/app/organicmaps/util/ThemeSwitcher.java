@@ -46,26 +46,11 @@ public enum ThemeSwitcher
    * map-related theme changes occur.
    */
   @androidx.annotation.UiThread
-  public void synchronizeApplicationTheme()
-  {
-    final Config.UiTheme themePreference = Config.UiTheme.getUiThemePreference();
-    final boolean isScheduledTheme = themePreference == Config.UiTheme.SCHEDULED;
-    final boolean isNavigationAutoDark =
-        RoutingController.get().isNavigating() && Config.UiTheme.isAutoDarkNavigationEnabled();
-
-    if (isScheduledTheme || isNavigationAutoDark)
-    {
-      final var dayTheme = isScheduledTheme ? Config.UiTheme.LIGHT : themePreference;
-      mSynchronizedThemeController.synchronizeTimeDependentTheme(dayTheme);
-    }
-    else
-    {
-      mSynchronizedThemeController.stop();
-      setTheme(themePreference);
-    }
-  }
-
-  /**
+public void synchronizeApplicationTheme()
+{
+  mSynchronizedThemeController.stop();
+  setTheme(Config.UiTheme.LIGHT);
+}  /**
    * Updates the map's visual style to match the current application theme and
    * navigation mode. Call this method when any of the following conditions change:
    *
