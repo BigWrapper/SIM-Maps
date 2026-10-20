@@ -107,7 +107,7 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v6
         with:
-          # Needed for versioning script
+          lfs: true
           fetch-depth: 200 # enough to get all commits for the current day
 
       - name: Parallel submodules checkout
