@@ -61,7 +61,7 @@
 
   <!-- Backgrounds -->
   <color name="bg_window">#FFEEEEEE</color>
-  <color name="bg_primary">#006C35</color>
+  <color name="bg_primary">#FFD700</color>
   <color name="bg_cards">@android:color/white</color>
   <color name="bg_panel">@color/bg_window</color>
   <color name="notes_fade_start">#00FFFFFF</color>
