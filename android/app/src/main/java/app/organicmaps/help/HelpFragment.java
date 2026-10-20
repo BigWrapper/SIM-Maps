@@ -25,6 +25,7 @@ import app.organicmaps.sdk.util.Constants;
 import app.organicmaps.sdk.util.DateUtils;
 import app.organicmaps.util.Graphics;
 import app.organicmaps.util.SharingUtils;
+import app.organicmaps.sharing.SharingIntent;
 import app.organicmaps.util.Utils;
 import app.organicmaps.util.WindowInsetUtils.ScrollableContentInsetsListener;
 import app.organicmaps.widget.DonationView;
