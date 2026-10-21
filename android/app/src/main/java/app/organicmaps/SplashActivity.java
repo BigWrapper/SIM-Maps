@@ -243,6 +243,6 @@ public class SplashActivity extends AppCompatActivity
   {
     int brandingInfoId = getResources().getIdentifier("ll__branding_info", "id", getPackageName());
 final View brandingInfo = brandingInfoId != 0 ? findViewById(brandingInfoId) : null;
-    ViewCompat.setOnApplyWindowInsetsListener(brandingInfo, BaselinePaddingInsetsListener.onlyBottom());
+        if (brandingInfo != null) ViewCompat.setOnApplyWindowInsetsListener(brandingInfo, BaselinePaddingInsetsListener.onlyBottom());
   }
 }
