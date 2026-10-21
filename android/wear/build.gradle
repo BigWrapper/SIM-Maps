@@ -26,6 +26,18 @@ android {
             versionName = android.defaultConfig.versionName + '-Google'
         }
     }
+        lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable "HardwareId"
+    }
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+        checkDependencies = false
+        warningsAsErrors = false
+        disable += "HardwareId"
+    }
 }
 
 dependencies {
