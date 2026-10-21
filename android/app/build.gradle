@@ -475,6 +475,8 @@ tasks.whenTaskAdded {
 // ALLOW DEPRECATION - don't fail build
 afterEvaluate {
     tasks.withType(JavaCompile).configureEach {
-        options.compilerArgs.removeAll { it.toString().contains("Werror") }
+        options.compilerArgs.clear()
+        options.compilerArgs.add("-Xlint:unchecked")
     }
 }
+
