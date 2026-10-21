@@ -467,13 +467,12 @@ huaweiPublish {
   }
 }
 // DISABLE LINT CRASH - make CI green
-tasks.whenTaskAdded { task ->
-    if (task.name.toLowerCase().contains("lint")) {
-        task.enabled = false
+tasks.whenTaskAdded {
+    if (it.name.toLowerCase().contains("lint")) {
+        it.enabled = false
     }
-// ALLOW DEPRECATION WARNINGS - don't fail build
+}
+// ALLOW DEPRECATION - don't fail build
 tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs = options.compilerArgs.findAll { arg ->
-        !arg.contains("Werror")
-    }
+    options.compilerArgs = options.compilerArgs.findAll { !it.contains("Werror") }
 }
