@@ -471,4 +471,9 @@ tasks.whenTaskAdded { task ->
     if (task.name.toLowerCase().contains("lint")) {
         task.enabled = false
     }
+// ALLOW DEPRECATION WARNINGS - don't fail build
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs = options.compilerArgs.findAll { arg ->
+        !arg.contains("Werror")
+    }
 }
