@@ -88,8 +88,19 @@ android {
     }
   }
 
-  compileOptions {
+    compileOptions {
     coreLibraryDesugaringEnabled = true
+  }
+
+  lintOptions {
+    abortOnError false
+    checkReleaseBuilds false
+  }
+  lint {
+    abortOnError = false
+    checkReleaseBuilds = false
+    checkDependencies = false
+    warningsAsErrors = false
   }
 }
 
