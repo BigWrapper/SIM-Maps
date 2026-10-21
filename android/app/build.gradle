@@ -475,6 +475,6 @@ tasks.whenTaskAdded {
 // ALLOW DEPRECATION - don't fail build
 afterEvaluate {
     tasks.withType(JavaCompile).configureEach {
-        options.compilerArgs = options.compilerArgs.findAll { !it.contains("Werror") }
+        options.compilerArgs.removeAll { it.toString().contains("Werror") }
     }
 }
