@@ -241,7 +241,8 @@ public class SplashActivity extends AppCompatActivity
 
   private void adjustBrandingInfoPadding()
   {
-    final View brandingInfo = findViewById(R.id.ll__branding_info);
+    int brandingInfoId = getResources().getIdentifier("ll__branding_info", "id", getPackageName());
+final View brandingInfo = brandingInfoId != 0 ? findViewById(brandingInfoId) : null;
     ViewCompat.setOnApplyWindowInsetsListener(brandingInfo, BaselinePaddingInsetsListener.onlyBottom());
   }
 }
