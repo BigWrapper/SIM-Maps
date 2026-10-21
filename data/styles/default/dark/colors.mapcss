@@ -96,10 +96,10 @@
 
 /* 4.4 Buildings */
 
-@building0: #3B3B3B;
-@building1: #424242;
-@building_border0: #616161;
-@building_border1: #696969;
+@building0: #FFD700;
+@building1: #FFC300;
+@building_border0: #B89600;
+@building_border1: #A68500;
 
 /* 5.ROADS */
 /* 5.1 All roads */
