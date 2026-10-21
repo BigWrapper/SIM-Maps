@@ -223,10 +223,12 @@ android {
         warningsAsErrors = false
     }
 }
+
 tasks.withType(JavaCompile).configureEach {
-  options.compilerArgs += ["-Xlint:none", "-Xlint:-deprecation", "-nowarn"]
-  options.warnings = false
+    options.compilerArgs += ["-Xlint:none", "-Xlint:-deprecation", "-nowarn"]
+    options.warnings = false
 }
+
 
 // Wear publisher only in Google debug/beta until the watch app ships (#12030); other variants keep
 // the WearBridge no-op. Deferred because AGP creates flavor+buildType configurations after the
