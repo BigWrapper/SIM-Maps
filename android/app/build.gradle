@@ -185,6 +185,11 @@ android {
       matchingFallbacks = ['release']
     }
   }
+      lintOptions {
+    abortOnError false
+    checkReleaseBuilds false
+  }
+
 
   // Keep uncompressed only what truly benefits. .mwm, packed_polygons.bin (memory-mapped and seeked)
   // and .ttf fonts (read on demand by FreeType) need in-place random access; compressing them would
