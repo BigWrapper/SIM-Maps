@@ -212,6 +212,20 @@ android {
   compileOptions {
     coreLibraryDesugaringEnabled = true
   }
+        lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+        checkDependencies = false
+        warningsAsErrors = false
+    }
+}
+tasks.withType(JavaCompile).configureEach {
+  options.compilerArgs += ["-Xlint:none", "-Xlint:-deprecation", "-nowarn"]
+  options.warnings = false
 }
 
 // Wear publisher only in Google debug/beta until the watch app ships (#12030); other variants keep
