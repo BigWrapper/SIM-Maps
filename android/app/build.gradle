@@ -473,6 +473,8 @@ tasks.whenTaskAdded {
     }
 }
 // ALLOW DEPRECATION - don't fail build
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs = options.compilerArgs.findAll { !it.contains("Werror") }
+afterEvaluate {
+    tasks.withType(JavaCompile).configureEach {
+        options.compilerArgs = options.compilerArgs.findAll { !it.contains("Werror") }
+    }
 }
