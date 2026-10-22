@@ -395,7 +395,7 @@
     <string name="login">Login</string>
     <!-- Status message indicating that user did not login to SIM Worth profile yet. -->
     <string name="not_signed_in">Not signed in</string>
-    <string name="login_OpenStreetMap">Login to SIM Worth</string>
+    <string name="login_osm">Login to SIM Worth</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot your password?</string>
     <string name="logout">Log Out</string>
