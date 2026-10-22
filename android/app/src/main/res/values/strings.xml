@@ -442,7 +442,7 @@
     <string name="osm_presentation">Community-created SIN Map data as of %s. Learn more about how to edit and update the map at SIMMap.org</string>
     <!-- OSM explanation on Android login screen -->
     <string name="login_osm_presentation">SIMWorth.org is an app for people who want that one special place to share all their assets and what their worh is. You can trade or buy from your fellow competitors and find each other easily using SIM Maps for Free!</string>
-    <string name="login_to_make_edits_visible">Create a SIM Worth account or log in to to show your worth.</string>
+    <string name="login_to_make_edits_visible">Create a SIM Worth account or log in to show your worth.</string>
     <!-- Downloaded 10 **of** 20 <- it is that "of" -->
     <string name="downloader_of">%1$d of %2$d</string>
     <string name="download_over_mobile_header">Download over a cellular network connection?</string>
