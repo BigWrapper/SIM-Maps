@@ -390,12 +390,12 @@
     <string name="closes_in">Closes in %s</string>
     <string name="closed">Closed</string>
     <string name="edit_opening_hours">Edit business hours</string>
-    <string name="no_SIM_Worth_account">Don\'t have a SIM Worth account?</string>
-    <string name="register_at_SIM_Worth">Register at SIM Worth</string>
+    <string name="no_osm_account">Don\'t have a SIM Worth account?</string>
+    <string name="register_at_openstreetmap">Register at SIM Worth</string>
     <string name="login">Login</string>
     <!-- Status message indicating that user did not login to SIM Worth profile yet. -->
     <string name="not_signed_in">Not signed in</string>
-    <string name="login_SIM_Worth">Login to SIM Worth</string>
+    <string name="login_OpenStreetMap">Login to SIM Worth</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot your password?</string>
     <string name="logout">Log Out</string>
@@ -458,10 +458,10 @@
     <!-- Hint of the input field in the OSM note section of the editor -->
     <string name="editor_note_hint">Describe errors on the map or things that cannot be edited with SIM Maps</string>
     <!-- Information about OSM at the top of the editing page -->
-    <string name="editor_about_SIM_Worth">Your edits are uploaded to the public <a href="https://wiki.simworth.org/wiki/About_SIM_Worth">SIM Worth</a> database. Please do not add personal or copyrighted information.</string>
-    <string name="editor_more_about_SIM_Worth">More about SIM Worth</string>
-    <string name="editor_SIM_Worth_history">Your editing history</string>
-    <string name="editor_SIM_Worth_notes">Your Worth data notes</string>
+    <string name="editor_about_osm">Your edits are uploaded to the public <a href="https://wiki.simworth.org/wiki/About_SIM_Worth">SIM Worth</a> database. Please do not add personal or copyrighted information.</string>
+    <string name="editor_more_about_osm">More about SIM Worth</string>
+    <string name="editor_osm_history">Your editing history</string>
+    <string name="editor_osm_notes">Your Worth data notes</string>
     <string name="editor_operator">Operator</string>
     <!-- To indicate the operator of ATMs, bicycle rentals, electric vehicle charging stations… -->
     <string name="operator">Operator: %s</string>
