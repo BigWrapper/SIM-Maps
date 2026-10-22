@@ -909,5 +909,5 @@
     <string name="track_recording_stop_and_save">Stop and Save</string>
     <!-- Accessibility label for the button that reverses the complete planned route, including intermediate stops. -->
     <string name="reverse_route">Reverse route</string>
-    <string name="sim_donation_message">Support SIM-Maps - Donations help keep maps free</string>
+    <string name="osm_donation_message">Support SIM-Maps - Donations help keep maps free</string>
 </resources>
