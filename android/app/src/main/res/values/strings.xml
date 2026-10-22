@@ -184,9 +184,9 @@
     <!-- Used for bookmark editing -->
     <string name="done">Done</string>
     <!-- Data version in «About» screen, %@ is replaced by a local, human readable date. -->
-    <string name="data_version">OpenStreetMap data: %s</string>
+    <string name="data_version">SIM Map data: %s</string>
     <!-- Confirmation for OpenStreetMap log out. -->
-    <string name="osm_log_out_confirmation">Are you sure you want to log out of your OpenStreetMap account?</string>
+    <string name="osm_log_out_confirmation">Are you sure you want to log out of your SIM Worth account?</string>
     <!-- Title for tracks category in bookmarks manager -->
     <string name="tracks_title">Tracks</string>
     <!-- Length of track in cell that describes route -->
@@ -390,12 +390,12 @@
     <string name="closes_in">Closes in %s</string>
     <string name="closed">Closed</string>
     <string name="edit_opening_hours">Edit business hours</string>
-    <string name="no_osm_account">Don\'t have an OpenStreetMap account?</string>
-    <string name="register_at_openstreetmap">Register at OpenStreetMap</string>
+    <string name="no_SIM Worth_account">Don\'t have a SIM Worth account?</string>
+    <string name="register_at_SIM Worth">Register at SIM Worth</string>
     <string name="login">Login</string>
     <!-- Status message indicating that user did not login to OSM profile yet. -->
     <string name="not_signed_in">Not signed in</string>
-    <string name="login_osm">Login to OpenStreetMap</string>
+    <string name="login_SIM Worth">Login to SIM Worth</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot your password?</string>
     <string name="logout">Log Out</string>
@@ -439,10 +439,10 @@
     <string name="placepage_add_business_button">Add business</string>
     <string name="message_invalid_feature_position">No object can be located here</string>
     <!-- Text in About and OSM Login screens. First %@ is replaced by a local, human readable date. -->
-    <string name="osm_presentation">Community-created OpenStreetMap data as of %s. Learn more about how to edit and update the map at OpenStreetMap.org</string>
+    <string name="SIM Map_presentation">Community-created SIN Map data as of %s. Learn more about how to edit and update the map at SIMMap.org</string>
     <!-- OSM explanation on Android login screen -->
-    <string name="login_osm_presentation">OpenStreetMap.org (OSM) is a community project to build a free and open map. It\'s the main source of map data in SIM Maps and works similar to Wikipedia. You can add or edit places and they become available to millions of users all over the World.\nJoin the community and help to make a better map for everyone!</string>
-    <string name="login_to_make_edits_visible">Create an OpenStreetMap account or log in to publish your map edits to the world.</string>
+    <string name="login_SIM Worth_presentation">SIMWorth.org is an app for people who want that one special place to share all their assets and what their worh is. You can trade or buy from your fellow competitors and find each other easily using SIM Maps for Free!</string>
+    <string name="login_to_make_edits_visible">Create a SIM Worth account or log in to to show your worth.</string>
     <!-- Downloaded 10 **of** 20 <- it is that "of" -->
     <string name="downloader_of">%1$d of %2$d</string>
     <string name="download_over_mobile_header">Download over a cellular network connection?</string>
@@ -454,14 +454,14 @@
     <string name="editor_zip_code">ZIP Code</string>
     <string name="error_enter_correct_zip_code">Enter a valid ZIP code</string>
     <!-- Title for OSM note section in the editor -->
-    <string name="editor_other_info">Note to OpenStreetMap volunteers (optional)</string>
+    <string name="editor_other_info">Note to SIM Worth volunteers (optional)</string>
     <!-- Hint of the input field in the OSM note section of the editor -->
     <string name="editor_note_hint">Describe errors on the map or things that cannot be edited with SIM Maps</string>
     <!-- Information about OSM at the top of the editing page -->
-    <string name="editor_about_osm">Your edits are uploaded to the public <a href="https://wiki.openstreetmap.org/wiki/About_OpenStreetMap">OpenStreetMap</a> database. Please do not add personal or copyrighted information.</string>
-    <string name="editor_more_about_osm">More about OpenStreetMap</string>
-    <string name="editor_osm_history">Your editing history</string>
-    <string name="editor_osm_notes">Your map data notes</string>
+    <string name="editor_about_SIM Worth">Your edits are uploaded to the public <a href="https://wiki.simworth.org/wiki/About_SIM_Worth">SIM Worth</a> database. Please do not add personal or copyrighted information.</string>
+    <string name="editor_more_about_SIM Worth">More about SIM Worth</string>
+    <string name="editor_SIM Worth_history">Your editing history</string>
+    <string name="editor_SIM Worth_notes">Your Worth data notes</string>
     <string name="editor_operator">Operator</string>
     <!-- To indicate the operator of ATMs, bicycle rentals, electric vehicle charging stations… -->
     <string name="operator">Operator: %s</string>
