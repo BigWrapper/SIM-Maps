@@ -393,7 +393,7 @@
     <string name="no_SIM Worth_account">Don\'t have a SIM Worth account?</string>
     <string name="register_at_SIM Worth">Register at SIM Worth</string>
     <string name="login">Login</string>
-    <!-- Status message indicating that user did not login to OSM profile yet. -->
+    <!-- Status message indicating that user did not login to SIM Worth profile yet. -->
     <string name="not_signed_in">Not signed in</string>
     <string name="login_SIM Worth">Login to SIM Worth</string>
     <string name="password">Password</string>
