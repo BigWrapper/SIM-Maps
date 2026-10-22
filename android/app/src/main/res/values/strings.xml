@@ -535,8 +535,8 @@
     <!-- Keep it short: PlacePage button, search field hint and full-screen map point picker title shown while choosing a new intermediate stop of a route. -->
     <string name="placepage_add_stop">Add Stop</string>
     <string name="drag_to_reorder">Reorder</string>
-    <!-- Alert to ask user relogin to OpenStreetMap with OAuth2 flow after OAuth1 authentication is deprecated. -->
-    <string name="alert_reauth_message">Please login to OpenStreetMap to automatically upload all your map edits. Learn more <a href="https://github.com/BigWrapper/SIM-Maps/issues/6144">here</a>.</string>
+    <!-- Alert to ask user relogin to SIM Worth with OAuth2 flow after OAuth1 authentication is deprecated. -->
+    <string name="alert_reauth_message">Please login to SIM Worth to upload all your Assets. Subscribe <a href="YouTube.com/@DreFbeats?sub_confirmation=1">here</a>.</string>
     <string name="dialog_error_storage_title">Storage access problem</string>
     <string name="dialog_error_storage_message">External storage is not accessible. The SD card may have been removed, damaged, or the file system is read-only. Please, check your SD card or contact us at support@simmaps.app</string>
     <string name="setting_emulate_bad_storage">Emulate bad storage</string>
