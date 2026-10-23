@@ -177,7 +177,7 @@ public class SplashActivity extends AppCompatActivity
     }
     else
     {
-      intent.setComponent(new ComponentName(this, DownloadResourcesLegacyActivity.class));
+      intent.setComponent(new ComponentName(this, MwmActivity.class));
     }
 
     // FLAG_ACTIVITY_NEW_TASK and FLAG_ACTIVITY_RESET_TASK_IF_NEEDED break the cold start.
