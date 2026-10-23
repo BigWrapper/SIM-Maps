@@ -171,14 +171,7 @@ public class SplashActivity extends AppCompatActivity
     // https://github.com/organicmaps/organicmaps/issues/6944
     final Intent intent = Objects.requireNonNull(getIntent());
 
-    if (isManageSpaceActivity(intent))
-    {
-      intent.setComponent(new ComponentName(this, DownloaderActivity.class));
-    }
-    else
-    {
-      intent.setComponent(new ComponentName(this, MwmActivity.class));
-    }
+        intent.setComponent(new ComponentName(this, MwmActivity.class));
 
     // FLAG_ACTIVITY_NEW_TASK and FLAG_ACTIVITY_RESET_TASK_IF_NEEDED break the cold start.
     // https://github.com/organicmaps/organicmaps/pull/7287
