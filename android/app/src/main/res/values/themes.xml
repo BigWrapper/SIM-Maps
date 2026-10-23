@@ -6,8 +6,8 @@
     <item name="android:navigationBarColor">@color/bg_primary</item>
     <item name="android:statusBarColor">@color/bg_primary</item>
     <item name="android:windowSplashScreenBackground" tools:targetApi="31">@android:color/black</item>
-    <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@android:color/transparent</item>
-    <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="31">@null</item>
+    <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/splash_gold</item>
+    <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/sim_logo</item>
     <item name="android:windowSplashScreenBehavior" tools:targetApi="33">icon_preferred</item>
 </style>
 
