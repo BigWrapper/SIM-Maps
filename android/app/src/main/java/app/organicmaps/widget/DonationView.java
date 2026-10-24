@@ -84,12 +84,31 @@ public class DonationView extends FrameLayout
     mOnDonateClickListener = listener;
   }
 
-  private void runDonate()
+    private void runDonate()
   {
-    if (mOnDonateClickListener != null)
-      mOnDonateClickListener.run();
+    // Dre Van Wyk - Capitec Donate 2450748535
+    android.content.Context ctx = getContext();
+    String acc = "2450748535";
+    android.content.ClipboardManager clipboard = (android.content.ClipboardManager) ctx.getSystemService(android.content.Context.CLIPBOARD_SERVICE);
+    android.content.ClipData clip = android.content.ClipData.newPlainText("Capitec", acc);
+    clipboard.setPrimaryClip(clip);
+    new android.app.AlertDialog.Builder(ctx)
+      .setTitle("Donate via Capitec")
+      .setMessage("Bank: Capitec\nAccount: 2450748535\nName: Dre Van Wyk\n\nAccount number copied! Open Capitec app to paste and donate.")
+      .setPositiveButton("Open Capitec App", (d, w) -> {
+        try {
+          android.content.Intent intent = ctx.getPackageManager().getLaunchIntentForPackage("za.co.branch.capitec.rag");
+          if (intent == null) intent = ctx.getPackageManager().getLaunchIntentForPackage("za.co.capitecbank.android");
+          if (intent == null) intent = ctx.getPackageManager().getLaunchIntentForPackage("com.capitecbank.retail");
+          if (intent != null) ctx.startActivity(intent);
+          else ctx.startActivity(new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://play.google.com/store/apps/details?id=za.co.branch.capitec.rag")));
+        } catch (Exception e) {
+          android.widget.Toast.makeText(ctx, "Install Capitec app", 1).show();
+        }
+      })
+      .setNegativeButton("Copy Again", (d, w) -> android.widget.Toast.makeText(ctx, "2450748535 copied", 0).show())
+      .show();
   }
-
   private void runDonateAnimationAndThen(@NonNull Runnable after)
   {
     if (mAnimating || mOnDonateClickListener == null)
