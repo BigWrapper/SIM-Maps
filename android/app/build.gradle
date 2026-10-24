@@ -245,6 +245,7 @@ afterEvaluate {
 }
 
 dependencies {
+  implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'     
   implementation project(':libs:api')
   implementation project(':libs:branding')
   implementation project(':libs:downloader')
