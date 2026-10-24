@@ -45,8 +45,6 @@ import com.google.android.material.badge.BadgeUtils;
 import com.google.android.material.badge.ExperimentalBadgeUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.HashMap;
-import android.media.MediaPlayer;
-import app.organicmaps.Framework;
 import java.util.Map;
 
 public class MapButtonsController extends Fragment
@@ -117,22 +115,11 @@ public class MapButtonsController extends Fragment
     mFrame.findViewById(R.id.nav_zoom_out)
         .setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.zoomOut));
     final View bookmarksButton = mFrame.findViewById(R.id.btn_bookmarks);
-bookmarksButton.setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.bookmarks));
-final View myPosition = mFrame.findViewById(R.id.my_position);
-mNavMyPosition = new MyPositionButton(myPosition, (v) -> {
-    double zoom = Framework.nativeGetDrawScale();
-    if (zoom > 5) {
-        return;
-    }
-    try {
-        MediaPlayer mp = MediaPlayer.create(requireContext(), R.raw.auto_zoom_drop);
-        if (mp != null) {
-            mp.setOnCompletionListener(MediaPlayer::release);
-            mp.start();
-        }
-    } catch (Exception ignored) {}
-    mMapButtonClickListener.onMapButtonClick(MapButtons.myPosition);
-});
+    bookmarksButton.setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.bookmarks));
+    final View myPosition = mFrame.findViewById(R.id.my_position);
+    mNavMyPosition =
+        new MyPositionButton(myPosition, (v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.myPosition));
+
     // Some buttons do not exist in navigation mode
     mToggleMapLayerButton = mFrame.findViewById(R.id.layers_button);
     if (mToggleMapLayerButton != null)
