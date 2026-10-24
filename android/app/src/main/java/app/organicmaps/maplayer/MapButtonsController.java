@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.media.MediaPlayer;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -110,10 +111,20 @@ public class MapButtonsController extends Fragment
 
     final FloatingActionButton helpButton = mFrame.findViewById(R.id.help_button);
     final View zoomFrame = mFrame.findViewById(R.id.zoom_buttons_container);
-    mFrame.findViewById(R.id.nav_zoom_in)
-        .setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.zoomIn));
-    mFrame.findViewById(R.id.nav_zoom_out)
-        .setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.zoomOut));
+            View zoomInView = mFrame.findViewById(R.id.nav_zoom_in);
+        zoomInView.setOnClickListener((v) -> {
+            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.zoom_plusminus);
+            mp.setOnCompletionListener(MediaPlayer::release);
+            mp.start();
+            mMapButtonClickListener.onMapButtonClick(MapButtons.zoomIn);
+        });
+        View zoomOutView = mFrame.findViewById(R.id.nav_zoom_out);
+        zoomOutView.setOnClickListener((v) -> {
+            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.zoom_plusminus);
+            mp.setOnCompletionListener(MediaPlayer::release);
+            mp.start();
+            mMapButtonClickListener.onMapButtonClick(MapButtons.zoomOut);
+        });
     final View bookmarksButton = mFrame.findViewById(R.id.btn_bookmarks);
     bookmarksButton.setOnClickListener((v) -> mMapButtonClickListener.onMapButtonClick(MapButtons.bookmarks));
     final View myPosition = mFrame.findViewById(R.id.my_position);
