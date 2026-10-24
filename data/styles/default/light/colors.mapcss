@@ -164,11 +164,11 @@
 
 /* 6.LABELS COLORS */
 /* 6.1 Main labels */
-@label_dark: #222222;
-@label_medium: #333333;
-@label_light: #444444;
+@label_dark: #0000FF;
+@label_medium: #0000FF;
+@label_light: #0000FF;
 @label_halo_medium: #EDEBDB;
-@label_halo_light: #FF0000;
+@label_halo_light: #FFFFFF;
 
 /* 6.2 Natural labels */
 
