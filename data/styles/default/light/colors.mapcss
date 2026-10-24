@@ -37,7 +37,7 @@
 /* 3.NATURAL */
 /* 3.1 Main natural */
 
-@glacier: #FFFFFF;
+@glacier: #FF0000;
 @water: #8BD3E0;
 @water_bad: #9dc7c1;
 @water_intermittent: #C4E9EF;
@@ -111,10 +111,10 @@
 @primary2: #FFA14C;
 @secondary0: #FFB226;
 @secondary1: #FFBF52;
-@tertiary: #D00000;
-@residential: #D00000;
-@pedestrian: #D00000;
-@footway: #D00000;
+@tertiary: #FF0000;
+@residential: #FF0000;
+@pedestrian: #FF0000;
+@footway: #FF0000;
 @cycleway: #5654FF;
 @construction: #BBBBAA;
 @track: #635730;
@@ -135,9 +135,9 @@
 @primary_tunnel_casing: #808080;
 @secondary_tunnel: #FFBF52;
 @secondary_tunnel_casing:  #808080;
-@tertiary_tunnel: #D00000;
+@tertiary_tunnel: #FF0000;
 @tertiary_tunnel_casing:  #808080;
-@residential_tunnel: #D00000;
+@residential_tunnel: #FF0000;
 @residential_tunnel_casing: #808080;
 
 /* 5.4 Piste */
@@ -168,13 +168,13 @@
 @label_medium: #333333;
 @label_light: #444444;
 @label_halo_medium: #EDEBDB;
-@label_halo_light: #FFFFFF;
+@label_halo_light: #FF0000;
 
 /* 6.2 Natural labels */
 
 @water_label: #4499Bb;
 @park_label: #3A7921;
-@halo_park_label: #FFFFFF;
+@halo_park_label: #FF0000;
 
 /* 6.3 Place labels */
 
@@ -192,7 +192,7 @@
 
 @shield_text: #000000;
 @shield_text_halo: #000000;
-@shield: #FFFFFF;
+@shield: #FF0000;
 @shield_outline: #000000;
 /* blue - #2E89B0; #687E94; #598DBE; */
 
