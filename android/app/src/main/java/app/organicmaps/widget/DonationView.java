@@ -111,7 +111,7 @@ public class DonationView extends FrameLayout
   }
   private void runDonateAnimationAndThen(@NonNull Runnable after)
   {
-    if (mAnimating || mOnDonateClickListener == null)
+    if (mAnimating)
       return;
 
     final View target = (mCardRoot != null) ? mCardRoot : this;
