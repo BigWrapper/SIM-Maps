@@ -111,16 +111,16 @@ public class MapButtonsController extends Fragment
 
     final FloatingActionButton helpButton = mFrame.findViewById(R.id.help_button);
     final View zoomFrame = mFrame.findViewById(R.id.zoom_buttons_container);
-            View zoomInView = mFrame.findViewById(R.id.nav_zoom_in);
+                    View zoomInView = mFrame.findViewById(R.id.nav_zoom_in);
         zoomInView.setOnClickListener((v) -> {
-            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.zoom_plusminus);
+            MediaPlayer mp = MediaPlayer.create(mFrame.getContext(), R.raw.zoom_plusminus);
             mp.setOnCompletionListener(MediaPlayer::release);
             mp.start();
             mMapButtonClickListener.onMapButtonClick(MapButtons.zoomIn);
         });
         View zoomOutView = mFrame.findViewById(R.id.nav_zoom_out);
         zoomOutView.setOnClickListener((v) -> {
-            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.zoom_plusminus);
+            MediaPlayer mp = MediaPlayer.create(mFrame.getContext(), R.raw.zoom_plusminus);
             mp.setOnCompletionListener(MediaPlayer::release);
             mp.start();
             mMapButtonClickListener.onMapButtonClick(MapButtons.zoomOut);
