@@ -472,7 +472,7 @@ public class Utils
   {
     // The same l11n logic as in Framework::GetDonateUrl()
 
-            final String url = "";
+            final String url = "https://capitecbank.co.za";
     return url;
   }
 }
