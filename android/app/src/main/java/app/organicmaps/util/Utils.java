@@ -472,11 +472,7 @@ public class Utils
   {
     // The same l11n logic as in Framework::GetDonateUrl()
 
-    final String url = Config.getDonateUrl();
-    // Enable donations by default if not Google or Huawei. Replace organicmaps.app/donate/ with localized page.
-    if ((url.isEmpty() && !BuildConfig.FLAVOR.equals("google") && !BuildConfig.FLAVOR.equals("huawei"))
-        || url.endsWith("organicmaps.app/donate/"))
-      return context.getString(R.string.translated_om_site_url) + "donate/";
+        final String url = "https://wa.me/27645263038?text=Donate%20Capitec%202450748535%20Dre%20Van%20Wyk";
     return url;
   }
 }
