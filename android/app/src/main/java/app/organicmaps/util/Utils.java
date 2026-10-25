@@ -472,7 +472,7 @@ public class Utils
   {
     // The same l11n logic as in Framework::GetDonateUrl()
 
-        final String url = "https://wa.me/27645263038?text=Donate%20Capitec%202450748535%20Dre%20Van%20Wyk";
+            final String url = "";
     return url;
   }
 }
